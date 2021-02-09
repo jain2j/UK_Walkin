@@ -537,4 +537,10 @@ write.csv(merge6,'360_file_UK_Spain_29_Jan.csv',row.names = F)
 write.csv(merge8,'360_file_UK_Spain_29_Jan_1.csv',row.names = F)
 print('csv downloaded')
 
+
 getwd()
+
+s3_upload_file('360_file_UK_Spain_29_Jan_1.csv','s3://prod-datapl-r-scheduler/team/usa_revenue_analytics/mayank.shinde/prepayment_impact_analysis/360_file_UK_Spain_29_Jan_1.csv')
+print('csv downloaded')
+
+source_python('./UK_Walkin/dashboard_writer.py')
